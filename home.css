@@ -84,7 +84,8 @@ nav a:hover{
       background-color: yellowgreen;
       cursor: pointer;
       padding: 20px;
-      transition: all 1s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      box-shadow: black 0px 10px 10px;
     }
     .btn a{
       text-decoration: none;

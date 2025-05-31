@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <title>Login - DashHorizon</title>
   <link rel="stylesheet" href="login.css">
-  <script src="login.js"></script>
+  <script src="login.js">
+  </script>
 </head>
 <body>
   <header>
     <img src="img1.png" alt="logo">
     <nav>
-      <a href="#">HOME</a>
-      <a href="#">LOG IN</a>
-      <a href="#">SERVICES</a>
+      <a href="home.html">HOME</a>
+      <a href="login1.html">LOG IN</a>
+      <a href="display.html">SERVICES</a>
     </nav>
   </header>
 
@@ -20,13 +21,14 @@
     <div class="login-box">
       <h2>LOG IN</h2>
       <form>
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+        <label for="emailInput">Email</label>
+        <input type="email" id="emailInput" placeholder="email" required>
 
-        <label for="password">Password</label>
-        <input type="password" id="passwordField" required>
+        <label for="passwordField">Password</label>
+        <input type="password" id="passwordField" placeholder="password" required>
 
-        <button type="submit" id="toggleBtn">log in</button>
+        <button onclick="login()">log in</button>
+        <div class="message" id="message"></div>
       </form>
     </div>
   </main>

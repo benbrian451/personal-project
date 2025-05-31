@@ -1,28 +1,33 @@
  
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+  function login() {
+  const emailInput = document.getElementById("emailInput");
+  const passwordField = document.getElementById("passwordField");
+  const messageDiv = document.getElementById("message");
 
-    if (!email || !password) {
-      alert("Please enter both email and password.");
-    } else {
-      alert(`Welcome back to DashHorizon Motors, ${email}!`);
-    
-    }
-  });
+  const email = emailInput.value;
+  const password = passwordField.value;
 
-  
-  const passwordField = document.getElementById("password");
-  const toggleBtn = document.createElement("button");
-  toggleBtn.type = "button";
-  toggleBtn.textContent = "Show Password";
-  toggleBtn.style.marginTop = "5px";
+  const validEmail = "admin@gmail.com";
+  const validPassword = "1234";
 
-  passwordField.parentElement.appendChild(toggleBtn);
+  messageDiv.classList.remove('fade-out'); 
+  messageDiv.style.opacity = 1; 
 
-  toggleBtn.addEventListener("click", () => {
-    const isHidden = passwordField.type === "password";
-    passwordField.type = isHidden ? "text" : "password";
-    toggleBtn.textContent = isHidden
-  })
+  if (email === "" || password === "") {
+    messageDiv.textContent = "Please enter both email and password.";
+    return;
+  }
+
+  if (email === validEmail && password === validPassword) {
+    messageDiv.style.color = "green";
+    messageDiv.textContent = "Login successful!";
+    setTimeout(() => {
+      messageDiv.classList.add('fade-out');
+    }, 2000); 
+  } else {
+    messageDiv.style.color = "red";
+    messageDiv.textContent = "Invalid credentials. Try again.";
+    setTimeout(() => {
+      messageDiv.classList.add('fade-out');
+    }, 2000);
+  }}
