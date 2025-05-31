@@ -127,3 +127,70 @@ nav a:hover{
     padding: 0px;
     margin: 0px;
   }
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .pricing-tier {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .normal, .standard, .luxury {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    font-size: 24px;
+    margin: 8px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn {
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 600px) {
+  .note {
+    font-size: 28px;
+  }
+
+  .note2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .right img {
+    max-height: 300px;
+  }
+}

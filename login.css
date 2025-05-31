@@ -15,12 +15,9 @@ body {
   }
     
   nav a {
-    /* padding: 8px; */
-    /* align-self: center; */
     color: white;
     text-decoration: none;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    /* background-color: aquamarine; */
+    
 
   }
   
@@ -88,4 +85,35 @@ body {
 
 .message.fade-out {
   opacity: 0;
+}
+@media (max-width: 600px) {
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-box input {
+    width: 100%;
+  }
+
+  .login-box button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  header {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
 }
